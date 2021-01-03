@@ -18,6 +18,8 @@ def extract_repo(repo_path, branch, exported_dir="./tmp"):
     for commit in commits:
         print("=" * 30)
         for file_name in commit.stats.files:
+            if file_name[0] == '"' and file_name[-1] == '"':
+                file_name = file_name[1:-1]
             print(file_name)
             contents = None
             try:
