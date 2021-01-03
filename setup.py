@@ -1,9 +1,9 @@
 from setuptools import setup, find_packages
 
 setup(
-    name = 'git_extract',
+    name = 'esight',
     version = '1.0.0',
-    url = 'https://github.com/TakutoYoshikai/git_extract.git',
+    url = 'https://github.com/TakutoYoshikai/elemental-sight.git',
     license = 'MIT LICENSE',
     author = 'Takuto Yoshikai',
     author_email = 'takuto.yoshikai@gmail.com',
@@ -12,7 +12,7 @@ setup(
     packages = find_packages(),
     entry_points={
         "console_scripts": [
-            "git-extract = git_extract.git_extract:main",
+            "esight = esight.esight:main",
         ]
     }
 )
