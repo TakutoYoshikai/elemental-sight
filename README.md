@@ -1,5 +1,5 @@
 # git-extract
-This is an extractor of git repository.
+This is an extractor of git repository. It can extract all file changed from all histories.
 
 ### Usage
 **install**
