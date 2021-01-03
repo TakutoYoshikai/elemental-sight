@@ -24,7 +24,7 @@ def extract_repo(repo_path, branch, exported_dir="./tmp"):
                 contents = repo.git.show('{}:{}'.format(commit.hexsha, file_name))
             except:
                 continue
-            d = exported_dir + "/" + str(i)
+            d = exported_dir + "/" + str(len(commits) - i)
             os.makedirs(d)
             file_write(d + "/" + file_name, contents.encode("utf-8", "surrogateescape"))
         i = i + 1
