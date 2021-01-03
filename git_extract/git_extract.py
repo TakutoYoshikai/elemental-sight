@@ -7,6 +7,13 @@ commits = list(repo.iter_commits("master"))
 exported_dir = "./tmp"
 
 i = 1
+
+def file_write(filename, content):
+    file_dir = os.path.dirname(filename)
+    if not os.path.exists(file_dir):
+        os.makedirs(file_dir)
+    with open(filename, "wb") as f:
+        f.write(content)
 for commit in commits:
     print("=" * 30)
     for file_name in commit.stats.files:
@@ -18,8 +25,6 @@ for commit in commits:
             continue
         d = exported_dir + "/" + str(i)
         os.makedirs(d)
-        f = open(d + "/" + file_name, "wb")
-        f.write(contents.encode("utf-8", "surrogateescape"))
-        f.close()
+        file_write(d + "/" + file_name, contents.encode("utf-8", "surrogateescape"))
         i = i + 1
 
