@@ -27,7 +27,7 @@ def extract_repo(repo_path, branch, exported_dir="./tmp"):
             d = exported_dir + "/" + str(i)
             os.makedirs(d)
             file_write(d + "/" + file_name, contents.encode("utf-8", "surrogateescape"))
-            i = i + 1
+        i = i + 1
 
 
 def main():
