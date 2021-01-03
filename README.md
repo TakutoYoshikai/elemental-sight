@@ -1,5 +1,5 @@
 # elemental-sight
-This is an extractor of git repository. It can extract all file changed from all histories.
+This is an extractor of git repository. It can extract all files changed from all histories.
 
 ### Usage
 **install**
