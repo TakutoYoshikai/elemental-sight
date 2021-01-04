@@ -12,6 +12,11 @@ pip install git+https://github.com/TakutoYoshikai/elemental-sight.git
 esight <GIT REPOSITORY> <BRANCH> -o <OUTPUT DIR>
 ```
 
+**get commit detail**
+```bash
+edetail <COMMIT INDEX(integer)>
+```
+
 ### License
 MIT License
 
