@@ -2,6 +2,7 @@ from git import Repo
 import os
 import argparse
 import json
+import time
 
 def file_write(filename, content):
     file_dir = os.path.dirname(filename)
@@ -30,7 +31,8 @@ def extract_repo(repo_path, branch, exported_dir="./tmp"):
             file_write(d + "/" + file_name, contents.encode("utf-8", "surrogateescape"))
         json_data[str(len(commits) - i)] = {
             "name": commit.author.name,
-            "email": commit.author.email
+            "email": commit.author.email,
+            "date": time.strftime("%Y:%m:%d:%H:%M:%S", time.gmtime(commit.committed_date))
         }
         i = i + 1
     with open(exported_dir + "/git.json", mode="w") as f:

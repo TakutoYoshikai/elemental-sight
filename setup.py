@@ -13,6 +13,7 @@ setup(
     entry_points={
         "console_scripts": [
             "esight = esight.esight:main",
+            "edetail = esight.esight_detail:main",
         ]
     }
 )
