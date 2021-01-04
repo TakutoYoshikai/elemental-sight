@@ -7,7 +7,7 @@ def get_commit_detail(index):
         print(json_data[index])
 
 def main():
-    parser = argparse.ArgumentParser(description="This is an extractor of git repository.")
+    parser = argparse.ArgumentParser(description="edetail can get commit detail.")
     parser.add_argument("index")
     args = parser.parse_args()
     get_commit_detail(args.index)
