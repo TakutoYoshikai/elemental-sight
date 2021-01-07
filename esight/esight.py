@@ -32,7 +32,8 @@ def extract_repo(repo_path, branch, exported_dir="./tmp"):
         json_data[str(len(commits) - i)] = {
             "name": commit.author.name,
             "email": commit.author.email,
-            "date": time.strftime("%Y:%m:%d:%H:%M:%S", time.gmtime(commit.committed_date))
+            "date": time.strftime("%Y:%m:%d:%H:%M:%S", time.gmtime(commit.committed_date)),
+            "message": commit.message
         }
         i = i + 1
     with open(exported_dir + "/git.json", mode="w") as f:
