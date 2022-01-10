@@ -30,6 +30,7 @@ def extract_repo(repo_path, branch, exported_dir="./tmp"):
             d = exported_dir + "/" + str(len(commits) - i)
             file_write(d + "/" + file_name, contents.encode("utf-8", "surrogateescape"))
         json_data[str(len(commits) - i)] = {
+            "id": commit.hexsha,
             "name": commit.author.name,
             "email": commit.author.email,
             "date": time.strftime("%Y:%m:%d:%H:%M:%S", time.gmtime(commit.committed_date)),

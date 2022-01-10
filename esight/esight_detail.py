@@ -4,8 +4,9 @@ import argparse
 def get_commit_detail(index):
     with open("./git.json", "r") as f:
         json_data = json.load(f)
-        print("name: " + json_data[index]["name"])
-        print("email: " + json_data[index]["email"])
+        print("id: " + json_data[index]["id"])
+        print("committer_name: " + json_data[index]["name"])
+        print("committer_email: " + json_data[index]["email"])
         print("message: " + json_data[index]["message"])
 
 def main():
